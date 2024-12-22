@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Salah Alhaidari Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+.ftco-section {
+    padding: 0 !important;
+  }
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Salah Alhaidari</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+			  <li class="nav-item"><a href="#certification-section" class="nav-link"><span>Certification's </span></a></li>
+
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/w.jpg);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Salah Alhaidari</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Data analyst  ',
+						'Python Backend Developer  '
+						
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h3>Data Analyst & Python Backend Developer</h3>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="www.linkedin.com/in/salah-saeed-alhaidari-863b7a332" class="btn btn-primary py-3 px-4">linkedin</a> 
+							<a href="https://github.com/Salah-Alhaidri" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/mycircleimage.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Salah Alhaidari</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Data Analyst</span></p>
+										<p><span class="title-s">Experience: </span> <span>3 Years 3 Months</span></p>
+										<p><span class="title-s">Address: </span> <span>Riyadh, Saudi Arabia</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100">
+										</div>
+									</div>
+									
+
+									<span>Django Backend</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100">
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>With over 3 years of comprehensive experience in the field of data management & analytics, accompanied by a bachelor's degree in software engineering. 
+									Proficient in data analysis, statistical analysis, hypothesis testing, customer behaviour analysis, &amp; machine learning. 
+									Demonstrated success in leading impactful projects and providing effective mentorship.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data analyst &amp; Python Backend Developer</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, Health and Nutrition &amp; websites Development with Django </span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of software Engineering</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Arabic</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI &amp; Cognos</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Backend Developer,  Python web scraping, Excel, Git and GitHub, Google Analytics &amp; </span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Artificall Itellgent, programming </span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="22">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/salah-al-haidari-469ba8331?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>
+ 
+
+
+				<div style="width: 600px; text-align: justify; margin: 0 auto;">
+					Data Analyst with 3+ years of experience in data management and analysis. Skilled in data entry, 
+					cleansing, and validation, with a focus on ensuring data accuracy and quality. Proven ability to 
+					design data management systems, generate reports, and provide actionable insights to support 
+					decision-making. Experienced in collaborating with teams to streamline processes and enhance data workflows.
+				</div>
+
+
+ 			
+			</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date"> March 2024 - Sep 2024 </span>
+						<h2> Data entry officer</h2>
+						<span class="position"> Tamdeen Youth Foundation(TYF) </span>
+						<p class="mt-4">
+							Tamdeen Youth Foundation (TYF) is a Yemeni NGO. Its work is focused on humanitarian response, humanitarian aid, local development, climate action, peacebuilding
+											
+							<ul>
+								<li>Perform data entry, cleansing, sorting, and validation of health and nutrition data in alignment with the work plan.</li>
+
+								<li>  Design and implement robust databases and advanced spreadsheets to drive operational efficiency and data accuracy.
+								</li>
+								<li> 	Ensure data quality by verifying input and correcting errors.
+								</li>
+								<li> 	Assist in the analysis of data to support project reporting and decision-making.
+								</li>
+								<li>Prepare and submit regular reports, including weekly, monthly, and quarterly updates.
+								</li>
+								<li> 	Provide feedback on data inconsistencies to the project team and suggest corrective actions.
+								</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Feb 2022 - Aug 2023 </span>
+						<h2>Data Management Assistant </h2>
+						<span class="position">Save the Children International (SCI) </span>
+						<p class="mt-4">
+ 
+							Save the Children is a global nonprofit focused on improving children's lives through education, healthcare, and advocacy. It provides emergency relief and promotes children's rights worldwide.
+
+							<ul>
+								<li>Ensured effective communication of data insights and findings to stakeholders and relevant communities.</li>
+								<li>Supported the development of a robust data management system by documenting, implementing, and streamlining standardized information workflows.</li>
+								<li>Developed and conducted routine tests to evaluate data quality and identify potential inconsistencies or errors.</li>
+								<li>Ensured data quality by verifying completeness and timeliness, identifying gaps in information management, and recommending corrective actions while providing timely feedback to project staff on accuracy and completeness issues.</li>
+							</ul>
+							
+							 
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2015-2020</span>
+    					<h2>Bachelor of software Engineering</h2>
+    					<span class="position"> Taiz University</span>
+    					<p class="mt-4">GPA : 83.48%</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2012-2013</span>
+    					<h2>Higher Secondary School</h2>
+    					<span class="position">  Alshaheed Abdulmalik Qasim Saif School </span>
+    					<p class="mt-4">GPA: 84%</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="salah alhaidari CV.pdf" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on SQL,Python, Power BI & ML.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Salah-Alhaidri/-retail-company/blob/main/schema.sql" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Salah-Alhaidri/-retail-company/blob/main/schema.sql">retail-company Store Data Analysis using SQL</a></h3>
+                <p>Analyzed Sales  store data using advanced SQL queires to identify gaps and increase the business growth.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Salah-Alhaidri/-retail-company/blob/main/schema.sql" class="block-20 zoom-effect" style="background-image: url('images/Capture.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Salah-Alhaidri/-retail-company/blob/main/schema.sql">data Visualization project by using powerBI for Albadr company
+				</a></h3>
+                <p>
+					Designed and developed an interactive data visualization dashboard using Power BI for Albadr Company, providing actionable insights and enhancing data-driven decision-making.
+
+
+				</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/Salah-Alhaidri/cholera-data-analysis-project/blob/main/cholera%20project-1.jpg" class="block-20 zoom-effect" style="background-image: url('images/sd.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Salah-Alhaidri/cholera-data-analysis-project/blob/main/cholera%20project-1.jpg"> Cholera Power BI Dashboard Data Analysis Project
+				</a></h3>
+                <p>Cholera Response Reporting Tool for the Tamdeen Youth Foundation,Yemen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/Salah-Alhaidri/excel-dashboard" class="block-20 zoom-effect" style="background-image: url('images/Dashboard.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/Salah-Alhaidri/excel-dashboard">excel dashboard for Analyzed the SAM Database at Save The Children International (SCI)</a></h3>
+				  <p>
+					Analyzed the SAM Database across health, nutrition, and WASH sectors, creating dashboards to showcase key metrics like causes by month, cases by district, and health facility data. Utilized Excel and Power Query for data cleaning and reporting.
+				  </p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/Salah-Alhaidri/Automatic-Handwritten-Digit-Recognition-on-Students-grades-papers-off-line" class="block-20 zoom-effect" style="background-image: url('images/image_ocr.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/Salah-Alhaidri/Automatic-Handwritten-Digit-Recognition-on-Students-grades-papers-off-line">Automatic Handwritten Digit Recognition 
+					on  Students grades papers  off-line
+					</a></h3>
+				  <p>
+					This project develops a Python-based system using machine learning (SVM, ANN, CNN) to recognize handwritten digits for grade processing, achieving 98.32%-99.88% accuracy.
+
+
+
+
+
+
+
+
+
+
+
+
+				</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/Salah-Alhaidri/NewOpenForum" class="block-20 zoom-effect" style="background-image: url('images/forum.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/Salah-Alhaidri/NewOpenForum"> online forum discussion, built with Django.</a></h3>
+				  <p>
+					 online forum discussion, built with Django, is a platform where users can engage in conversations on various topics.
+					Django's robust framework allows for quick development with its built-in features like user authentication, secure data handling, and an easy-to-use admin interface. 
+				   
+					
+					</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+    <section class="ftco-section" id="certification-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Certification's</h1>
+            <h2 class="mb-4">Certification's</h2>
+            <p>Below are the sample of Multiple Professional Certificates.
+
+
+
+
+
+
+			</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="images/certificate.jpg" class="block-20 zoom-effect" style="background-image: url('images/certificate.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="images/certificate.jpg">University Certificate Degree (Graduation July 2020)</a></h3>
+                <p> </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="images/Coursera_data_analyst.jpg" class="block-20 zoom-effect" style="background-image: url('images/Coursera_data_analyst.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="images/Coursera_data_analyst.jpg">
+					IBM Data Analyst Certificate: Comprehensive Program in Data Analysis Using Excel, SQL, Python, Jupyter Notebooks, and Cognos Analytics | October 2024 (11 Courses)
+				</a></h3>
+
+
+				</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="images/YNC.jpg" class="block-20 zoom-effect" style="background-image: url('images/YNC.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="images/YNC.jpg">Information Management Training Program by Yemen Nutrition Cluster, covering data collection, analysis, and visualization from Oct 18 - Dec 13, 2022. The 14-hour remote course used tools like Kobo Toolbox, Google Forms, Excel, Power BI, and ArcMap Desktop.
+
+				</a></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="images/oracle_cer.jpg" class="block-20 zoom-effect" style="background-image: url('images/oracle_cer.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="images/oracle_cer.jpg">Oracle Cloud Data Management 2023 Certified Foundations Associate
+				</a></h3>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="images/UNDP.jpg" class="block-20 zoom-effect" style="background-image: url('images/UNDP.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="images/UNDP.jpg">United Nations Development Programme in partnership with Youth Leadership Development Foundation (YLDF) successfully completing the first and second innovation camps .</a></h3>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="images/open.jpg" class="block-20 zoom-effect" style="background-image: url('images/open.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="images/open.jpg">Online Professional English Network (OPEN) Teaching for the Future: English Teaching to Take on Climate Change. </a></h3>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+
+	
+
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Riyadh, Saudi Arabia				</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">0575675628 </a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">salah.alhaidri@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="salah alhaidari CV.pdf"  download class="btn btn-primary">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLScFI9MREo9c5a8MuXauiG_Elk_TxsylUnYczuFSfLRCSnzN0w/viewform?usp=dialog" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://github.com/Salah-Alhaidri"><span class="icon-github"></span></a></li>
+					  <li class="ftco-animate"><a href="www.linkedin.com/in/salah-saeed-alhaidari-863b7a332"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href=""><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.facebook.com/salahsaeed.alhaidariy"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/sa.lah8103/profilecard/?igsh=bHZha2sxMnc0cDQ3"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
